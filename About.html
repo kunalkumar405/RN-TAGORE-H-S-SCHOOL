@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About R.N. Tagore H.S. School | Our Campus & Facilities</title>
+    <meta name="description" content="Learn more about R.N. Tagore Higher Secondary School's history, mission, vision, state-of-the-art facilities, experienced faculty, and commitment to quality education.">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="https://media-hosting.imagekit.io/09320f4d0ad84f25/rn%20tagore%20logo%202.o.png?Expires=1838483430&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=PdGQ1ljtS~a8gpczWKoe9NfKau2eJxP-pzIYO2veq6HGLycqNCPnJjX7n~dYt48BVP34l~kLGS8Hiwzvc75WG-xUyjmW~iCWuvsxVRlITjQirRdiyTeIazn91RwL0tDwMdJ85hxP37gp5d4k2hbjB7IjwJ5Gklgm32tkHiqCxt~4po4s6OlWfRWVdrxSJXkMOaGsi2ulh41KT-ZPPyGVP81lajEutHXlO1OrQeocvDp0nhQnGd-0Yb1peyDDt8SsJUtRY586mYPolBp7jvMSILv2ybMi6dJbvH6WIFO8zEtzDLrSscvsVejXSAGrm~9~EwzW7-EEn-YAmuCwFstZLg__" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://media-hosting.imagekit.io/09320f4d0ad84f25/rn%20tagore%20logo%202.o.png?Expires=1838483430&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=PdGQ1ljtS~a8gpczWKoe9NfKau2eJxP-pzIYO2veq6HGLycqNCPnJjX7n~dYt48BVP34l~kLGS8Hiwzvc75WG-xUyjmW~iCWuvsxVRlITjQirRdiyTeIazn91RwL0tDwMdJ85hxP37gp5d4k2hbjB7IjwJ5Gklgm32tkHiqCxt~4po4s6OlWfRWVdrxSJXkMOaGsi2ulh41KT-ZPPyGVP81lajEutHXlO1OrQeocvDp0nhQnGd-0Yb1peyDDt8SsJUtRY586mYPolBp7jvMSILv2ybMi6dJbvH6WIFO8zEtzDLrSscvsVejXSAGrm~9~EwzW7-EEn-YAmuCwFstZLg__" sizes="180x180">
+
+    <style>
+        /* Optional: Add specific styles for the About page if needed */
+        .page-header {
+            background: linear-gradient(rgba(26, 75, 140, 0.7), rgba(26, 75, 140, 0.7)), url('placeholder-school-banner.jpg') no-repeat center center/cover; /* Replace with a relevant banner image */
+            padding: 6rem 0;
+            text-align: center;
+            color: var(--white);
+            margin-top: 8rem; /* Adjust based on fixed header height */
+        }
+        .page-header h1 {
+            font-size: clamp(3.5rem, 6vw, 5rem);
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+        .page-header p {
+            font-size: 1.8rem;
+            max-width: 70rem;
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .facility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .facility-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--box-shadow-light);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .facility-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow);
+        }
+
+        .facility-card img {
+            width: 100%;
+            height: 20rem; /* Fixed height for facility images */
+            object-fit: cover;
+            display: block;
+        }
+
+        .facility-card .content {
+            padding: 2rem;
+            flex-grow: 1; /* Allows content to fill space */
+        }
+
+        .facility-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        .facility-card p {
+             font-size: 1.5rem;
+             color: var(--dark-gray);
+        }
+
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            background-color: var(--light-gray);
+            padding: 4rem;
+            border-radius: var(--border-radius-lg);
+            margin-top: 4rem;
+        }
+        .mission-vision h3 {
+            margin-bottom: 1.5rem;
+            color: var(--secondary-blue);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+         .mission-vision h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 5rem;
+            height: 3px;
+            background-color: var(--accent-yellow);
+         }
+
+
+        /* Responsive adjustments for mission/vision grid */
+        @media (max-width: 768px) {
+            .mission-vision {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                padding: 3rem;
+            }
+            .page-header {
+                 margin-top: 7rem; /* Adjust for smaller header */
+                 padding: 4rem 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="school.html" class="logo" aria-label="R.N. Tagore H.S. School Homepage">
+                 <img src="https://media-hosting.imagekit.io/09320f4d0ad84f25/rn%20tagore%20logo%202.o.png?Expires=1838483430&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=PdGQ1ljtS~a8gpczWKoe9NfKau2eJxP-pzIYO2veq6HGLycqNCPnJjX7n~dYt48BVP34l~kLGS8Hiwzvc75WG-xUyjmW~iCWuvsxVRlITjQirRdiyTeIazn91RwL0tDwMdJ85hxP37gp5d4k2hbjB7IjwJ5Gklgm32tkHiqCxt~4po4s6OlWfRWVdrxSJXkMOaGsi2ulh41KT-ZPPyGVP81lajEutHXlO1OrQeocvDp0nhQnGd-0Yb1peyDDt8SsJUtRY586mYPolBp7jvMSILv2ybMi6dJbvH6WIFO8zEtzDLrSscvsVejXSAGrm~9~EwzW7-EEn-YAmuCwFstZLg__" alt="R.N. Tagore H.S. School Logo">
+                <div class="logo-text">
+                    <h1>R.N. Tagore H.S. School</h1>
+                    <p>A Quality School For Better Tomorrow</p>
+                </div>
+            </a>
+            <nav aria-label="Main Navigation">
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false" aria-controls="nav-menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul id="nav-menu" role="menu">
+                    <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                    <li role="none"><a href="About.html" role="menuitem">About</a></li>
+                    <li role="none"><a href="Notic.html" role="menuitem">Notices</a></li>
+                    <li role="none"><a href="Gallery.html" role="menuitem">Gallery</a></li>
+                    <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
+                    <li role="none"><a href="topper.html" role="menuitem">Toppers</a></li>
+                    <li role="none" class="nav-btn-li"><a href="Admission .html" class="btn nav-btn" role="menuitem">Admissions</a></li>
+                    <li role="none" class="mobile-nav-btn" style="display: none;"><a href="Admission .html" class="btn" role="menuitem">Admissions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>About R.N. Tagore H.S. School</h1>
+            <p>Discover our journey, values, and the environment we've built for nurturing future leaders.</p>
+        </div>
+    </section>
+
+    <main>
+
+        <section class="section" id="our-story">
+            <div class="container">
+                <h2>Our Journey & Philosophy</h2>
+                <p>Founded in 1985, R.N. Tagore Higher Secondary School embarked on a mission to provide exceptional and accessible education. For decades, we have remained steadfast in our commitment to academic rigor, character building, and fostering a love for lifelong learning. We believe that every child possesses unique potential, and our goal is to provide a supportive and stimulating environment where they can discover and hone their talents.</p>
+                <p>Our philosophy centers around holistic development – nurturing not just the mind, but also the heart and spirit. We encourage critical thinking, creativity, collaboration, and compassion, preparing our students to excel academically and become responsible, ethical citizens of the world.</p>
+
+                <div class="mission-vision">
+                    <div class="mission">
+                        <h3>Our Mission</h3>
+                        <p>To provide high-quality, affordable education that empowers students with knowledge, skills, and values necessary to thrive in a dynamic global society, while fostering a deep respect for diverse cultures and traditions.</p>
+                    </div>
+                    <div class="vision">
+                        <h3>Our Vision</h3>
+                        <p>To be a leading educational institution recognized for academic excellence, innovative teaching practices, and the holistic development of students, creating individuals who contribute positively to their communities and the world.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="principal-message" style="background-color: var(--light-gray);">
+             <div class="container">
+                  <h2>A Word From Our Principal</h2>
+                 <div class="principal" style="background-color: var(--white); max-width: 90rem; margin: 0 auto;"> <figure class="principal-img">
+                        <img src="https://media-hosting.imagekit.io/cd9d510130dd40fa/hitesh%20sir.png?Expires=1838483843&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=E4Hi24zZyn~V6G3KYOsumisy5idTZDetiQtOCKEIbka6wOJcSQ0-RLRsWQq-NDETIMUNWQCKFWQmhM5HdtXIaUx06tOW409MB93lCZBFYlIAUuKLRX47LPLiEheNtnf-gejbpzUDQ-ZP4EA0UZZIwhfJPZfs1ajWxi0oqKWl1rOLtC4ZnmwLqekZ3VNCs3c3nTn0jgsjfa-Dxh3IA6Qp-yKEdyBE0GeKMYKhHkurDVdvhI6hgBdwI6roxfuJ79yt5lLxHmpbBpO0kh8BPvqBUb1NplfoW8~3dLljfXAxJOHODx4Z8Sgy3ub4IS7smRj3r9Ybb~HjMAxMawrkfBvfAA__" alt="Portrait of Principal Dr. Hitesh Mahajan">
+                    </figure>
+                    <div class="principal-info">
+                        <blockquote>
+                             <p>"Welcome to the R.N. Tagore family! Here, we are dedicated to creating a nurturing space where curiosity is sparked, potential is unlocked, and character is forged. We believe education transforms lives, and we are committed to guiding our students towards academic success and personal growth, preparing them for a bright and meaningful future."</p>
+                        </blockquote>
+                        <figcaption>
+                            <strong>Dr. Hitesh Mahajan</strong><br>Principal
+                        </figcaption>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+
+        <section class="section" id="facilities">
+            <div class="container">
+                <h2>Our Campus & Facilities</h2>
+                <p>We provide a modern, safe, and stimulating campus designed to support diverse learning needs and co-curricular pursuits. Our facilities are continuously updated to ensure students have access to the best resources.</p>
+       
+                <div class="facility-grid">
+                    <article class="facility-card">
+                        <img src="https://placehold.co/400x250/E8DED2/6D5F4D?text=Smart+Classroom" alt="Spacious classroom with smart board">
+                        <div class="content">
+                            <h3>Smart Classrooms</h3>
+                            <p>Well-ventilated, spacious classrooms equipped with modern teaching aids like smart boards and projectors to make learning interactive and engaging.</p>
+                        </div>
+                    </article>
+                    <article class="facility-card">
+                         <img src="https://placehold.co/400x250/D2E8E0/4D6D62?text=Library" alt="Well-stocked library with reading areas">
+                        <div class="content">
+                            <h3>Resourceful Library</h3>
+                            <p>A quiet haven for readers, our library boasts a vast collection of books, journals, periodicals, and digital resources to support research and reading habits.</p>
+                        </div>
+                    </article>
+                     <article class="facility-card">
+                         <img src="https://placehold.co/400x250/D2D9E8/4D586D?text=Science+Lab" alt="Students conducting experiments in science lab">
+                        <div class="content">
+                            <h3>Advanced Science Labs</h3>
+                            <p>Fully equipped Physics, Chemistry, and Biology labs adhering to safety standards, allowing students to gain practical experience through experimentation.</p>
+                        </div>
+                    </article>
+                     <article class="facility-card">
+                         <img src="https://placehold.co/400x250/E8D2D2/6D4D4D?text=Computer+Lab" alt="Computer lab with rows of computers">
+                        <div class="content">
+                            <h3>Modern Computer Lab</h3>
+                            <p>State-of-the-art computer lab with ample systems, high-speed internet, and relevant software to enhance digital literacy and IT skills.</p>
+                        </div>
+                    </article>
+                     <article class="facility-card">
+                         <img src="https://placehold.co/400x250/D7E8D2/5A6D4D?text=Playground" alt="Large school playground with sports equipment">
+                        <div class="content">
+                            <h3>Expansive Sports Ground</h3>
+                            <p>A large playground and dedicated courts for various sports like cricket, football, basketball, and badminton, encouraging physical fitness and teamwork.</p>
+                        </div>
+                    </article>
+                    <article class="facility-card">
+                         <img src="https://placehold.co/400x250/E8E1D2/6D654D?text=School+Bus" alt="School bus fleet">
+                        <div class="content">
+                            <h3>Safe Transportation</h3>
+                            <p>A reliable fleet of buses covering various routes, equipped with safety features and managed by trained staff to ensure secure commutes for students.</p>
+                        </div>
+                    </article>
+                     <article class="facility-card">
+                         <img src="https://placehold.co/400x250/E8D2E4/6D4D66?text=Art+Room" alt="Art room with student artwork displayed">
+                        <div class="content">
+                            <h3>Creative Arts Studio</h3>
+                            <p>A dedicated space for students to explore their artistic talents in drawing, painting, craft, and other visual arts under expert guidance.</p>
+                        </div>
+                    </article>
+                     <article class="facility-card">
+                         <img src="https://placehold.co/400x250/CCCCCC/666666?text=Security+Camera" alt="CCTV camera monitoring school premises">
+                        <div class="content">
+                            <h3>Safety & Security</h3>
+                            <p>Our campus is monitored by CCTV surveillance and trained security personnel to ensure a safe and secure environment for all students and staff.</p>
+                        </div>
+                    </article>
+       
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="academics" style="background-color: var(--light-gray);">
+            <div class="container">
+                <h2>Academics & Faculty</h2>
+                <p>We follow a comprehensive curriculum [Mention Board, e.g., affiliated with CBSE/State Board] that balances academic rigor with co-curricular activities. Our focus is on fostering critical thinking, problem-solving skills, and a deep understanding of concepts.</p>
+                <div class="academics-details" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr)); gap: 2rem; margin-top: 3rem;">
+                    <div>
+                        <i class="fas fa-chalkboard-teacher fa-2x" style="color: var(--secondary-blue); margin-bottom: 1rem;"></i>
+                        <h4>Experienced Faculty</h4>
+                        <p>Our team comprises highly qualified, passionate, and experienced educators dedicated to providing personalized attention and fostering a positive learning environment.</p>
+                    </div>
+                    <div>
+                         <i class="fas fa-book-open fa-2x" style="color: var(--secondary-blue); margin-bottom: 1rem;"></i>
+                        <h4>Holistic Curriculum</h4>
+                        <p>Emphasis on integrating sports, arts, music, and value education alongside core subjects for the all-round development of students.</p>
+                    </div>
+                    <div>
+                         <img src="https://media-hosting.imagekit.io/f8b75d3a9c3b49ff/pw.jpg?Expires=1838484150&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=KBSxvQHs19vLVpVz2y9b5Zk6Y9tCtsXs73JeCCRtzrAMElBF9Q8Yn2tZudwVyrILVB1bsyKPvkADmmlqO1icnNdSoJZtwMcobSmKA3wu-2izZjiR~ns8yCreproNmUTFAqF0KhTFck0Rn8XRRDjqGDZJWMjJg6XKJ92fvbam0tlvOp0GUjb~Xdyxk97GkW2E4aWyk7dVeT7Xx-MFtQzWPWxBZhTdSsl-oZnMLIrqM5jh5kWjkiA2UCgGI~BZ0nCIBZmBX~nbeCiCnJRDB15aD1YEyinaLzVkocRPfuwYC69JkvNNZ61yvTw0PuMMx78pKwplLkNHdUtSf2SoX~BBvw__" alt="Physics Wallah Logo" style="height: 40px; margin-bottom: 1rem;">
+                        <h4>Physics Wallah Partnership</h4>
+                        <p>Leveraging our collaboration with Physics Wallah to provide top-tier resources for competitive exam preparation and strengthening STEM foundations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <section class="section cta-section" style="background-color: var(--secondary-blue); color: var(--white);">
+            <div class="container" style="text-align: center;">
+                <h2 style="color: var(--white);">Ready to Join Our Community?</h2>
+                 <p style="color: rgba(255,255,255,0.9); margin-bottom: 3rem;">Explore our admission process or get in touch with us for more information.</p>
+                <a href="admission.html" class="btn" style="background-color: var(--accent-yellow); color: var(--primary-blue); margin-right: 1rem;">View Admissions Info</a>
+                <a href="index.html#contact" class="btn" style="background-color: var(--white); color: var(--primary-blue);">Contact Us</a>
+            </div>
+        </section>
+
+
+    </main> <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>R.N. Tagore Higher Secondary School is committed to providing quality education that empowers students to become responsible global citizens.</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Twitter profile"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram profile"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our YouTube channel"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="about.html" aria-current="page">About</a></li> <li><a href="index.html#notices">Notices</a></li>
+                        <li><a href="index.html#gallery">Gallery</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="admission.html">Admissions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Academics</h3>
+                    <ul>
+                        <li><a href="#">Curriculum</a></li>
+                        <li><a href="#">Facilities</a></li>
+                        <li><a href="#">Faculty</a></li>
+                        <li><a href="#">School Calendar</a></li>
+                        <li><a href="#">Results</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <address>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 123 Education Road, Knowledge City</li>
+                            <li><i class="fas fa-phone-alt" aria-hidden="true"></i> <a href="tel:+919876543210">+91 9876543210</a></li>
+                            <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@rntagoreschool.edu">info@rntagoreschool.edu</a></li>
+                        </ul>
+                    </address>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© <span id="current-year">2025</span> R.N. Tagore Higher Secondary School. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <script src="first.js"></script>
+    <script>
+        // Ensure copyright year is updated
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        // Ensure mobile menu and back-to-top button JS works
+    </script>
+
+</body>
+</html>

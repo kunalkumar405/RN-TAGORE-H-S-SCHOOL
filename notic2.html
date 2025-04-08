@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notice Board - Page 2 | R.N. Tagore H.S. School</title>
+    <meta name="description" content="Stay updated with the latest announcements, news, events, and important notices from R.N. Tagore Higher Secondary School - Page 2.">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="https://media-hosting.imagekit.io/09320f4d0ad84f25/rn%20tagore%20logo%202.o.png?Expires=1838483430&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=PdGQ1ljtS~a8gpczWKoe9NfKau2eJxP-pzIYO2veq6HGLycqNCPnJjX7n~dYt48BVP34l~kLGS8Hiwzvc75WG-xUyjmW~iCWuvsxVRlITjQirRdiyTeIazn91RwL0tDwMdJ85hxP37gp5d4k2hbjB7IjwJ5Gklgm32tkHiqCxt~4po4s6OlWfRWVdrxSJXkMOaGsi2ulh41KT-ZPPyGVP81lajEutHXlO1OrQeocvDp0nhQnGd-0Yb1peyDDt8SsJUtRY586mYPolBp7jvMSILv2ybMi6dJbvH6WIFO8zEtzDLrSscvsVejXSAGrm~9~EwzW7-EEn-YAmuCwFstZLg__" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://media-hosting.imagekit.io/09320f4d0ad84f25/rn%20tagore%20logo%202.o.png?Expires=1838483430&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=PdGQ1ljtS~a8gpczWKoe9NfKau2eJxP-pzIYO2veq6HGLycqNCPnJjX7n~dYt48BVP34l~kLGS8Hiwzvc75WG-xUyjmW~iCWuvsxVRlITjQirRdiyTeIazn91RwL0tDwMdJ85hxP37gp5d4k2hbjB7IjwJ5Gklgm32tkHiqCxt~4po4s6OlWfRWVdrxSJXkMOaGsi2ulh41KT-ZPPyGVP81lajEutHXlO1OrQeocvDp0nhQnGd-0Yb1peyDDt8SsJUtRY586mYPolBp7jvMSILv2ybMi6dJbvH6WIFO8zEtzDLrSscvsVejXSAGrm~9~EwzW7-EEn-YAmuCwFstZLg__" sizes="180x180">
+
+    <style>
+        /* Styles from Notic.html - बिल्कुल समान स्टाइलिंग बनाए रखने के लिए कॉपी किए गए */
+        /* Optional: Add specific styles for the Notices page */
+        .page-header { /* Reusing style from About page, adjust if needed */
+            background: linear-gradient(rgba(26, 75, 140, 0.75), rgba(26, 75, 140, 0.75)), url('placeholder-notice-banner.jpg') no-repeat center center/cover; /* Replace with a relevant banner image */
+            padding: 6rem 0;
+            text-align: center;
+            color: var(--white);
+            margin-top: 8rem; /* Adjust based on fixed header height */
+        }
+        .page-header h1 {
+            font-size: clamp(3.5rem, 6vw, 5rem);
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+        .page-header p {
+            font-size: 1.8rem;
+            max-width: 70rem;
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .notice-list {
+            max-width: 90rem; /* Limit width for readability */
+            margin: 4rem auto 0; /* Add top margin */
+        }
+
+        .notice-article {
+            background-color: var(--white);
+            border: 1px solid #e0e0e0;
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: var(--box-shadow-light);
+            transition: var(--transition);
+        }
+
+        .notice-article:hover {
+             box-shadow: var(--box-shadow);
+             border-left: 5px solid var(--secondary-blue); /* Accent on hover */
+             transform: translateY(-3px);
+        }
+
+        .notice-article h2 {
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            text-align: left; /* Override general h2 centering */
+            position: relative;
+        }
+         /* Remove the global h2::after underline for notice titles */
+        .notice-article h2::after {
+            display: none;
+        }
+
+
+        .notice-meta {
+            font-size: 1.4rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        .notice-meta .date-published {
+             font-weight: 600;
+             color: var(--dark-gray);
+        }
+        .notice-meta i {
+            margin-right: 0.5rem;
+            color: var(--secondary-blue);
+        }
+
+        .notice-content p {
+            font-size: 1.6rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+         .notice-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .notice-attachments {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px dashed #ddd;
+        }
+        .notice-attachments h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-gray);
+        }
+        .notice-attachments ul {
+            list-style: none;
+            padding-left: 0;
+        }
+         .notice-attachments li {
+             margin-bottom: 0.5rem;
+         }
+
+        .notice-attachments a {
+            font-size: 1.5rem;
+            color: var(--secondary-blue);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+         .notice-attachments a:hover {
+             color: var(--primary-blue);
+             text-decoration: underline;
+         }
+         .notice-attachments a i {
+             margin-right: 0.8rem;
+         }
+
+        /* Simple Pagination Placeholder Style */
+        .pagination {
+            text-align: center;
+            margin-top: 4rem;
+        }
+        .pagination a, .pagination span {
+            display: inline-block;
+            padding: 1rem 1.5rem;
+            margin: 0 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            color: var(--secondary-blue);
+            transition: var(--transition);
+        }
+        .pagination a:hover {
+            background-color: var(--secondary-blue);
+            color: var(--white);
+            border-color: var(--secondary-blue);
+        }
+        .pagination .current-page {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border-color: var(--primary-blue);
+            font-weight: 600;
+        }
+        .pagination .disabled {
+            color: #aaa;
+            border-color: #eee;
+            cursor: not-allowed;
+        }
+
+
+        @media (max-width: 768px) {
+            .page-header {
+                 margin-top: 7rem; /* Adjust for smaller header */
+                 padding: 4rem 0;
+            }
+             .notice-article {
+                 padding: 2rem;
+             }
+             .notice-article h2 {
+                 font-size: 2rem;
+             }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+             <a href="school.html" class="logo" aria-label="R.N. Tagore H.S. School Homepage">
+                 <img src="https://media-hosting.imagekit.io/09320f4d0ad84f25/rn%20tagore%20logo%202.o.png?Expires=1838483430&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=PdGQ1ljtS~a8gpczWKoe9NfKau2eJxP-pzIYO2veq6HGLycqNCPnJjX7n~dYt48BVP34l~kLGS8Hiwzvc75WG-xUyjmW~iCWuvsxVRlITjQirRdiyTeIazn91RwL0tDwMdJ85hxP37gp5d4k2hbjB7IjwJ5Gklgm32tkHiqCxt~4po4s6OlWfRWVdrxSJXkMOaGsi2ulh41KT-ZPPyGVP81lajEutHXlO1OrQeocvDp0nhQnGd-0Yb1peyDDt8SsJUtRY586mYPolBp7jvMSILv2ybMi6dJbvH6WIFO8zEtzDLrSscvsVejXSAGrm~9~EwzW7-EEn-YAmuCwFstZLg__" alt="R.N. Tagore H.S. School Logo">
+                 <div class="logo-text">
+                     <h1>R.N. Tagore H.S. School</h1>
+                     <p>A Quality School For Better Tomorrow</p>
+                 </div>
+             </a>
+             <nav aria-label="Main Navigation">
+                 <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false" aria-controls="nav-menu">
+                     <i class="fas fa-bars"></i>
+                 </button>
+                 <ul id="nav-menu" role="menu">
+                     <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                     <li role="none"><a href="About.html" role="menuitem">About</a></li>
+                     <li role="none"><a href="Notic.html" role="menuitem">Notices</a></li>
+                     <li role="none"><a href="Gallery.html" role="menuitem">Gallery</a></li>
+                     <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
+                     <li role="none"><a href="topper.html" role="menuitem">Toppers</a></li>
+                     <li role="none" class="nav-btn-li"><a href="Admission .html" class="btn nav-btn" role="menuitem">Admissions</a></li>
+                     <li role="none" class="mobile-nav-btn" style="display: none;"><a href="Admission .html" class="btn" role="menuitem">Admissions</a></li>
+                 </ul>
+             </nav>
+        </div>
+    </header>
+
+     <section class="page-header">
+         <div class="container">
+             <h1>Notice Board</h1>
+             <p>Find the latest announcements and important updates from the school administration.</p>
+         </div>
+     </section>
+
+     <main>
+         <section class="section" id="notice-listing">
+             <div class="container">
+                 <div class="notice-list">
+
+                     <article class="notice-article">
+                         <header>
+                             <h2>Parent-Teacher Meeting Schedule (Classes VI-VIII)</h2>
+                             <div class="notice-meta">
+                                 <span class="date-published">
+                                     <i class="fas fa-calendar-alt"></i>Published:
+                                     <time datetime="2025-03-25">March 25, 2025</time>
+                                 </span>
+                                 <span><i class="fas fa-tags"></i>Category: Meetings, Parents, Academics</span>
+                             </div>
+                         </header>
+                         <div class="notice-content">
+                             <p>Dear Parents of Classes VI, VII, and VIII, the Parent-Teacher Meeting for the mid-term assessment is scheduled for April 8th, 2025. Please refer to the slot timings circulated via email.</p>
+                             <p>Your presence and feedback are highly valuable. Kindly adhere to the allocated time slot.</p>
+                         </div>
+                         </article>
+
+                     <article class="notice-article">
+                         <header>
+                             <h2>Science Exhibition Participation Details</h2>
+                             <div class="notice-meta">
+                                 <span class="date-published">
+                                     <i class="fas fa-calendar-alt"></i>Published:
+                                     <time datetime="2025-03-20">March 20, 2025</time>
+                                 </span>
+                                  <span><i class="fas fa-tags"></i>Category: Events, Academics, Students</span>
+                             </div>
+                         </header>
+                         <div class="notice-content">
+                             <p>Students interested in participating in the upcoming Annual Science Exhibition (Theme: Sustainable Innovations) are requested to register their projects by April 5th, 2025.</p>
+                             <p>Detailed guidelines and the registration form are available for download below. Contact your Science teacher for further queries.</p>
+                         </div>
+                          <div class="notice-attachments">
+                             <h4><i class="fas fa-paperclip"></i> Attachments</h4>
+                              <ul>
+                                  <li>
+                                      <a href="downloads/science-exhibition-guidelines-2025.pdf" download>
+                                          <i class="fas fa-file-pdf"></i> Science Exhibition Guidelines 2025.pdf
+                                      </a>
+                                  </li>
+                                  <li>
+                                      <a href="downloads/science-exhibition-registration-2025.pdf" download>
+                                          <i class="fas fa-file-pdf"></i> Science Exhibition Registration Form 2025.pdf
+                                      </a>
+                                  </li>
+                              </ul>
+                         </div>
+                     </article>
+
+                      <article class="notice-article">
+                         <header>
+                             <h2>School Canteen Menu Update</h2>
+                             <div class="notice-meta">
+                                 <span class="date-published">
+                                     <i class="fas fa-calendar-alt"></i>Published:
+                                     <time datetime="2025-03-15">March 15, 2025</time>
+                                 </span>
+                                  <span><i class="fas fa-tags"></i>Category: General, Students</span>
+                             </div>
+                         </header>
+                         <div class="notice-content">
+                             <p>Please be informed that the school canteen menu has been updated effective April 1st, 2025, to include more healthy and diverse options.</p>
+                             <p>The updated menu is displayed on the canteen notice board and is also available on the school website's 'Student Life' section.</p>
+                         </div>
+                          </article>
+
+                 </div>
+
+                 <nav class="pagination" aria-label="Notices navigation">
+                    <a href="Notic.html">&laquo; Previous</a>
+                    <a href="Notic.html">1</a>
+                    <span class="current-page">2</span>
+                    <a href="notic3.html">3</a>
+                    <a href="notic3.html">Next &raquo;</a>
+                </nav>
+
+             </div>
+         </section>
+     </main>
+
+     <footer>
+         <div class="container">
+             <div class="footer-content">
+                 <div class="footer-column">
+                     <h3>About Us</h3>
+                     <p>R.N. Tagore Higher Secondary School is committed to providing quality education that empowers students to become responsible global citizens.</p>
+                     <div class="social-links">
+                         <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                         <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Twitter profile"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                         <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram profile"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                         <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our YouTube channel"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                     </div>
+                 </div>
+                 <div class="footer-column">
+                     <h3>Quick Links</h3>
+                     <ul>
+                         <li><a href="index.html#home">Home</a></li>
+                         <li><a href="about.html">About</a></li>
+                         <li><a href="Notic.html">Notices</a></li>
+                         <li><a href="index.html#gallery">Gallery</a></li>
+                         <li><a href="index.html#contact">Contact</a></li>
+                         <li><a href="admission.html">Admissions</a></li>
+                     </ul>
+                 </div>
+                 <div class="footer-column">
+                     <h3>Academics</h3>
+                     <ul>
+                         <li><a href="#">Curriculum</a></li>
+                         <li><a href="#">Facilities</a></li>
+                         <li><a href="#">Faculty</a></li>
+                         <li><a href="#">School Calendar</a></li>
+                         <li><a href="#">Results</a></li>
+                     </ul>
+                 </div>
+                 <div class="footer-column">
+                     <h3>Contact Info</h3>
+                     <address>
+                         <ul>
+                             <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 123 Education Road, Knowledge City</li>
+                             <li><i class="fas fa-phone-alt" aria-hidden="true"></i> <a href="tel:+919876543210">+91 9876543210</a></li>
+                             <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@rntagoreschool.edu">info@rntagoreschool.edu</a></li>
+                         </ul>
+                     </address>
+                 </div>
+             </div>
+             <div class="copyright">
+                 <p>© <span id="current-year">2025</span> R.N. Tagore Higher Secondary School. All Rights Reserved.</p>
+             </div>
+         </div>
+     </footer>
+
+     <button class="back-to-top" id="backToTop" aria-label="Back to top">
+         <i class="fas fa-arrow-up" aria-hidden="true"></i>
+     </button>
+
+     <script src="first.js"></script>
+     <script>
+         // Ensure copyright year is updated
+         document.getElementById('current-year').textContent = new Date().getFullYear();
+         // Ensure mobile menu and back-to-top button JS works (assuming it's in first.js)
+     </script>
+
+</body>
+</html>

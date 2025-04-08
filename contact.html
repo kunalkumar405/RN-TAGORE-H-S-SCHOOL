@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | R.N. Tagore H.S. School</title>
+    <meta name="description" content="Get in touch with R.N. Tagore Higher Secondary School. Find our address, phone number, email, and location map, or send us a message using our contact form.">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="https://media-hosting.imagekit.io/09320f4d0ad84f25/rn%20tagore%20logo%202.o.png?Expires=1838483430&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=PdGQ1ljtS~a8gpczWKoe9NfKau2eJxP-pzIYO2veq6HGLycqNCPnJjX7n~dYt48BVP34l~kLGS8Hiwzvc75WG-xUyjmW~iCWuvsxVRlITjQirRdiyTeIazn91RwL0tDwMdJ85hxP37gp5d4k2hbjB7IjwJ5Gklgm32tkHiqCxt~4po4s6OlWfRWVdrxSJXkMOaGsi2ulh41KT-ZPPyGVP81lajEutHXlO1OrQeocvDp0nhQnGd-0Yb1peyDDt8SsJUtRY586mYPolBp7jvMSILv2ybMi6dJbvH6WIFO8zEtzDLrSscvsVejXSAGrm~9~EwzW7-EEn-YAmuCwFstZLg__" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://media-hosting.imagekit.io/09320f4d0ad84f25/rn%20tagore%20logo%202.o.png?Expires=1838483430&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=PdGQ1ljtS~a8gpczWKoe9NfKau2eJxP-pzIYO2veq6HGLycqNCPnJjX7n~dYt48BVP34l~kLGS8Hiwzvc75WG-xUyjmW~iCWuvsxVRlITjQirRdiyTeIazn91RwL0tDwMdJ85hxP37gp5d4k2hbjB7IjwJ5Gklgm32tkHiqCxt~4po4s6OlWfRWVdrxSJXkMOaGsi2ulh41KT-ZPPyGVP81lajEutHXlO1OrQeocvDp0nhQnGd-0Yb1peyDDt8SsJUtRY586mYPolBp7jvMSILv2ybMi6dJbvH6WIFO8zEtzDLrSscvsVejXSAGrm~9~EwzW7-EEn-YAmuCwFstZLg__" sizes="180x180">
+
+    <style>
+        /* Styles for Page Header (Can reuse from About/Gallery) */
+        .page-header {
+            background: linear-gradient(rgba(26, 75, 140, 0.7), rgba(26, 75, 140, 0.7)), url('https://picsum.photos/1920/400?random=contact') no-repeat center center/cover; /* Random Banner */
+            padding: 6rem 0;
+            text-align: center;
+            color: var(--white);
+            margin-top: 8rem; /* Adjust based on fixed header height */
+        }
+        .page-header h1 {
+            font-size: clamp(3.5rem, 6vw, 5rem);
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+        .page-header p {
+            font-size: 1.8rem;
+            max-width: 70rem;
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Ensure .contact-container, .contact-info, .contact-form etc. styles exist from index.html CSS */
+        /* Add specific overrides if needed */
+         .contact-info {
+            background: var(--light-gray); /* Match style from index */
+            padding: 3rem;
+            border-radius: var(--border-radius-lg);
+        }
+         .contact-info h3 {
+            color: var(--primary-blue);
+            margin-bottom: 2rem;
+        }
+         .contact-item { /* Match style from index */
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            gap: 1.5rem;
+        }
+        .contact-item i { /* Match style from index */
+            color: var(--secondary-blue);
+            font-size: 1.8rem;
+            margin-top: 0.3rem;
+            width: 2rem;
+            text-align: center;
+        }
+        .map { /* Match style from index */
+            height: 30rem;
+            margin-top: 3rem;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+        .map iframe { width: 100%; height: 100%; border: none;}
+
+        /* Form styling (ensure consistency with index CSS) */
+        .contact-form h3 {
+             color: var(--primary-blue);
+             margin-bottom: 2rem;
+        }
+        .contact-form .form-group {
+             margin-bottom: 2rem;
+        }
+        .contact-form label { /* Style labels if not using sr-only */
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-size: 1.6rem;
+            font-family: inherit;
+        }
+        .contact-form textarea { min-height: 15rem; resize: vertical; }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+             border-color: var(--secondary-blue);
+             box-shadow: 0 0 0 2px rgba(58, 123, 213, 0.2);
+             outline: none;
+        }
+        .contact-form button { /* Uses .btn styles */
+             width: auto; /* Default button width */
+        }
+
+
+         /* Responsive adjustments */
+         @media (max-width: 992px) {
+             /* Stacking handled by .contact-container grid change in main CSS */
+             .contact-info { margin-bottom: 4rem; }
+         }
+
+         @media (max-width: 768px) {
+             .page-header { margin-top: 7rem; padding: 4rem 0; }
+             .contact-info { padding: 2.5rem; }
+             .map { height: 25rem; }
+         }
+         @media (max-width: 576px) {
+            .contact-form button { width: 100%; } /* Full width button on small screens */
+         }
+
+         /* Helper class for screen-reader only labels */
+        .sr-only {
+          position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+          overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="school.html" class="logo" aria-label="R.N. Tagore H.S. School Homepage">
+                <img src="https://media-hosting.imagekit.io/09320f4d0ad84f25/rn%20tagore%20logo%202.o.png?Expires=1838483430&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=PdGQ1ljtS~a8gpczWKoe9NfKau2eJxP-pzIYO2veq6HGLycqNCPnJjX7n~dYt48BVP34l~kLGS8Hiwzvc75WG-xUyjmW~iCWuvsxVRlITjQirRdiyTeIazn91RwL0tDwMdJ85hxP37gp5d4k2hbjB7IjwJ5Gklgm32tkHiqCxt~4po4s6OlWfRWVdrxSJXkMOaGsi2ulh41KT-ZPPyGVP81lajEutHXlO1OrQeocvDp0nhQnGd-0Yb1peyDDt8SsJUtRY586mYPolBp7jvMSILv2ybMi6dJbvH6WIFO8zEtzDLrSscvsVejXSAGrm~9~EwzW7-EEn-YAmuCwFstZLg__" alt="R.N. Tagore H.S. School Logo">
+                <div class="logo-text">
+                    <h1>R.N. Tagore H.S. School</h1>
+                    <p>A Quality School For Better Tomorrow</p>
+                </div>
+            </a>
+            <nav aria-label="Main Navigation">
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false" aria-controls="nav-menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul id="nav-menu" role="menu">
+                    <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                    <li role="none"><a href="About.html" role="menuitem">About</a></li>
+                    <li role="none"><a href="Notic.html" role="menuitem">Notices</a></li>
+                    <li role="none"><a href="Gallery.html" role="menuitem">Gallery</a></li>
+                    <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
+                    <li role="none"><a href="topper.html" role="menuitem">Toppers</a></li>
+                    <li role="none" class="nav-btn-li"><a href="Admission .html" class="btn nav-btn" role="menuitem">Admissions</a></li>
+                    <li role="none" class="mobile-nav-btn" style="display: none;"><a href="Admission .html" class="btn" role="menuitem">Admissions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+     <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you! Reach out with your queries or visit us.</p>
+        </div>
+    </section>
+
+    <main>
+        <section class="contact section" id="contact-page-content">
+            <div class="container">
+                 <div class="contact-container"> <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <address class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                <div>
+                                    <h4>Our Address</h4>
+                                    <p>
+                                        123 School Lane,<br>
+                                        Knowledge Park V,<br>
+                                        Cityville, State - 456789,<br>
+                                        India
+                                    </p>
+                                </div>
+                            </div>
+                             <div class="contact-item">
+                                <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <p>
+                                        <a href="tel:+911234567890">+91 12345 67890</a> (Office)<br>
+                                        <a href="tel:+919876543210">+91 98765 43210</a> (Admissions)
+                                    </p>
+                                </div>
+                            </div>
+                             <div class="contact-item">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>
+                                        <a href="mailto:info@rntagore-example.com">info@rntagore-example.com</a><br>
+                                        <a href="mailto:admissions@rntagore-example.com">admissions@rntagore-example.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                             <div class="contact-item">
+                                <i class="fas fa-clock" aria-hidden="true"></i>
+                                <div>
+                                    <h4>Office Hours</h4>
+                                    <p>
+                                        Monday - Friday: 9:00 AM - 4:00 PM<br>
+                                        Saturday: 9:00 AM - 1:00 PM<br>
+                                        Sunday: Closed
+                                    </p>
+                                </div>
+                            </div>
+                        </address>
+                        <div class="map">
+                            <iframe
+                                src="about:blank" style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                title="School Location on Google Maps"
+                                referrerpolicy="no-referrer-when-downgrade">
+                           </iframe>
+                            <p style="font-size: 1.4rem; text-align: center; margin-top: 1rem;">(Replace above iframe 'src' with your Google Maps embed code)</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <h3>Send Us a Message</h3>
+                        <p style="margin-bottom: 2rem; font-size: 1.5rem;">Have questions? Fill out the form below, and we'll get back to you shortly.</p>
+                        <form id="contactPageForm" action="/your-form-handler-endpoint" method="POST">
+                            <div class="form-group">
+                                <label for="contactName">Full Name</label>
+                                <input type="text" id="contactName" name="name" placeholder="e.g., John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email Address</label>
+                                <input type="email" id="contactEmail" name="email" placeholder="e.g., john.doe@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactPhone">Phone Number (Optional)</label>
+                                <input type="tel" id="contactPhone" name="phone" placeholder="e.g., +91 9xxxx xxxxx">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactSubject">Subject</label>
+                                <input type="text" id="contactSubject" name="subject" placeholder="e.g., Admission Inquiry" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMessage">Your Message</label>
+                                <textarea id="contactMessage" name="message" rows="6" placeholder="Type your message here..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main> <footer>
+        <div class="container">
+            <div class="footer-content">
+                 <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>R.N. Tagore Higher Secondary School is committed to providing quality education that empowers students to become responsible global citizens.</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Twitter profile"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram profile"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our YouTube channel"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="notices.html">Notices</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html" aria-current="page">Contact</a></li> <li><a href="admission.html">Admissions</a></li>
+                    </ul>
+                </div>
+                 <div class="footer-column">
+                    <h3>Academics</h3>
+                    <ul>
+                        <li><a href="#">Curriculum</a></li>
+                        <li><a href="#">Facilities</a></li>
+                        <li><a href="#">Faculty</a></li>
+                        <li><a href="#">School Calendar</a></li>
+                        <li><a href="#">Results</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <address>
+                         <ul>
+                            <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 123 School Lane, Cityville</li>
+                            <li><i class="fas fa-phone-alt" aria-hidden="true"></i> <a href="tel:+911234567890">+91 12345 67890</a></li>
+                            <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@rntagore-example.com">info@rntagore-example.com</a></li>
+                        </ul>
+                    </address>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© <span id="current-year">2025</span> R.N. Tagore Higher Secondary School. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <script src="first.js"></script>
+    <script>
+        // Ensure copyright year is updated
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        // Ensure mobile menu and back-to-top button JS works
+    </script>
+
+</body>
+</html>

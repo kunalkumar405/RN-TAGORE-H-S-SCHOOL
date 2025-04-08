@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | R.N. Tagore H.S. School</title>
+    <meta name="description" content="Explore photos and moments from events, activities, and daily life at R.N. Tagore Higher Secondary School. View our campus, classrooms, labs, and student achievements.">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="https://media-hosting.imagekit.io/09320f4d0ad84f25/rn%20tagore%20logo%202.o.png?Expires=1838483430&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=PdGQ1ljtS~a8gpczWKoe9NfKau2eJxP-pzIYO2veq6HGLycqNCPnJjX7n~dYt48BVP34l~kLGS8Hiwzvc75WG-xUyjmW~iCWuvsxVRlITjQirRdiyTeIazn91RwL0tDwMdJ85hxP37gp5d4k2hbjB7IjwJ5Gklgm32tkHiqCxt~4po4s6OlWfRWVdrxSJXkMOaGsi2ulh41KT-ZPPyGVP81lajEutHXlO1OrQeocvDp0nhQnGd-0Yb1peyDDt8SsJUtRY586mYPolBp7jvMSILv2ybMi6dJbvH6WIFO8zEtzDLrSscvsVejXSAGrm~9~EwzW7-EEn-YAmuCwFstZLg__" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://media-hosting.imagekit.io/09320f4d0ad84f25/rn%20tagore%20logo%202.o.png?Expires=1838483430&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=PdGQ1ljtS~a8gpczWKoe9NfKau2eJxP-pzIYO2veq6HGLycqNCPnJjX7n~dYt48BVP34l~kLGS8Hiwzvc75WG-xUyjmW~iCWuvsxVRlITjQirRdiyTeIazn91RwL0tDwMdJ85hxP37gp5d4k2hbjB7IjwJ5Gklgm32tkHiqCxt~4po4s6OlWfRWVdrxSJXkMOaGsi2ulh41KT-ZPPyGVP81lajEutHXlO1OrQeocvDp0nhQnGd-0Yb1peyDDt8SsJUtRY586mYPolBp7jvMSILv2ybMi6dJbvH6WIFO8zEtzDLrSscvsVejXSAGrm~9~EwzW7-EEn-YAmuCwFstZLg__" sizes="180x180">
+
+    <style>
+        /* Styles from previous gallery page (Page Header, Albums, Lightbox Enhancements) */
+        /* Ensure these are either here or preferably in your main style.css */
+        .page-header {
+            background: linear-gradient(rgba(26, 75, 140, 0.8), rgba(26, 75, 140, 0.8)), url('https://picsum.photos/1920/400?grayscale&blur=2') no-repeat center center/cover; /* Random Banner */
+            padding: 6rem 0;
+            text-align: center;
+            color: var(--white);
+            margin-top: 8rem; /* Adjust based on fixed header height */
+        }
+        .page-header h1 {
+            font-size: clamp(3.5rem, 6vw, 5rem);
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+        .page-header p {
+            font-size: 1.8rem;
+            max-width: 70rem;
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        .gallery-album {
+            margin-bottom: 5rem;
+        }
+        .gallery-album h2 {
+            font-size: 2.8rem;
+            margin-bottom: 2.5rem;
+            color: var(--primary-blue);
+            text-align: left;
+            border-bottom: 2px solid var(--light-gray);
+            padding-bottom: 1rem;
+        }
+        .gallery-album h2::after { display: none; }
+
+        /* Ensure .gallery-grid, .gallery-item styles exist in style.css */
+
+        /* Lightbox Styles (Should be in style.css) */
+        .lightbox {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.85); z-index: 2000;
+            display: none; /* Changed by JS */
+            flex-direction: column; justify-content: center; align-items: center;
+            padding: 1rem; /* Padding around content */
+        }
+        .lightbox.active { display: flex; } /* JS adds this class */
+
+        .lightbox-content { position: relative; max-width: 90%; max-height: 85%; display: flex; justify-content: center; align-items: center; }
+        .lightbox img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; border-radius: var(--border-radius); box-shadow: 0 0 4rem rgba(0, 0, 0, 0.6); }
+        .lightbox-caption { color: var(--light-gray); text-align: center; margin-top: 1rem; font-size: 1.6rem; padding: 0 2rem; max-width: 80%; }
+        .lightbox-close { position: absolute; top: 1.5rem; right: 2rem; font-size: 3.5rem; z-index: 2002; color: white; background: none; border: none; cursor: pointer; line-height: 1; transition: transform 0.3s; }
+        .lightbox-close:hover { transform: scale(1.1); }
+        .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 100%; display: flex; justify-content: space-between; align-items: center; z-index: 2001; pointer-events: none; }
+        .lightbox-prev, .lightbox-next { background: rgba(0, 0, 0, 0.4); color: var(--white); border: none; font-size: 3rem; cursor: pointer; padding: 1.5rem 1rem; border-radius: var(--border-radius); transition: background 0.3s ease; pointer-events: auto; opacity: 0.7; margin: 0 1rem; }
+        .lightbox-prev:hover, .lightbox-next:hover { background: rgba(0, 0, 0, 0.7); opacity: 1; }
+
+        @media (max-width: 768px) {
+            .page-header { margin-top: 7rem; padding: 4rem 0; }
+            .gallery-album h2 { font-size: 2.4rem; }
+            .lightbox-prev, .lightbox-next { font-size: 2.5rem; padding: 1rem 0.8rem; }
+            .lightbox-caption { font-size: 1.4rem; max-width: 90%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="school.html" class="logo" aria-label="R.N. Tagore H.S. School Homepage">
+                <img src="https://media-hosting.imagekit.io/09320f4d0ad84f25/rn%20tagore%20logo%202.o.png?Expires=1838483430&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=PdGQ1ljtS~a8gpczWKoe9NfKau2eJxP-pzIYO2veq6HGLycqNCPnJjX7n~dYt48BVP34l~kLGS8Hiwzvc75WG-xUyjmW~iCWuvsxVRlITjQirRdiyTeIazn91RwL0tDwMdJ85hxP37gp5d4k2hbjB7IjwJ5Gklgm32tkHiqCxt~4po4s6OlWfRWVdrxSJXkMOaGsi2ulh41KT-ZPPyGVP81lajEutHXlO1OrQeocvDp0nhQnGd-0Yb1peyDDt8SsJUtRY586mYPolBp7jvMSILv2ybMi6dJbvH6WIFO8zEtzDLrSscvsVejXSAGrm~9~EwzW7-EEn-YAmuCwFstZLg__" alt="R.N. Tagore H.S. School Logo">
+                <div class="logo-text">
+                    <h1>R.N. Tagore H.S. School</h1>
+                    <p>A Quality School For Better Tomorrow</p>
+                </div>
+            </a>
+            <nav aria-label="Main Navigation">
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false" aria-controls="nav-menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul id="nav-menu" role="menu">
+                    <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                    <li role="none"><a href="About.html" role="menuitem">About</a></li>
+                    <li role="none"><a href="Notic.html" role="menuitem">Notices</a></li>
+                    <li role="none"><a href="Gallery.html" role="menuitem">Gallery</a></li>
+                    <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
+                    <li role="none"><a href="topper.html" role="menuitem">Toppers</a></li>
+                    <li role="none" class="nav-btn-li"><a href="Admission .html" class="btn nav-btn" role="menuitem">Admissions</a></li>
+                    <li role="none" class="mobile-nav-btn" style="display: none;"><a href="Admission .html" class="btn" role="menuitem">Admissions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>School Gallery</h1>
+            <p>A glimpse into the vibrant life at R.N. Tagore H.S. School.</p>
+        </div>
+    </section>
+
+    <main>
+        <section class="section" id="gallery-page">
+            <div class="container">
+
+                <section class="gallery-album" id="album-annual-function">
+                    <h2>Annual Function Highlights</h2>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-album="annual-function" data-src="https://picsum.photos/1200/800?random=1" data-caption="Cultural dance performance by students.">
+                            <img src="https://picsum.photos/400/300?random=1" alt="Cultural dance performance" loading="lazy">
+                            <div class="overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="gallery-item" data-album="annual-function" data-src="https://picsum.photos/1200/800?random=2" data-caption="Students receiving awards on stage.">
+                            <img src="https://picsum.photos/400/300?random=2" alt="Award ceremony" loading="lazy">
+                             <div class="overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></div>
+                        </div>
+                         <div class="gallery-item" data-album="annual-function" data-src="https://picsum.photos/1200/800?random=3" data-caption="Drama performance during the annual function.">
+                            <img src="https://picsum.photos/400/300?random=3" alt="School play performance" loading="lazy">
+                             <div class="overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="gallery-item" data-album="annual-function" data-src="https://picsum.photos/1200/800?random=4" data-caption="Guests and parents enjoying the show.">
+                            <img src="https://picsum.photos/400/300?random=4" alt="Audience watching event" loading="lazy">
+                            <div class="overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="gallery-album" id="album-sports">
+                    <h2>Sports Activities</h2>
+                    <div class="gallery-grid">
+                         <div class="gallery-item" data-album="sports" data-src="https://picsum.photos/1200/800?random=5" data-caption="Students competing in a relay race.">
+                             <img src="https://picsum.photos/400/300?random=5" alt="Relay race event" loading="lazy">
+                              <div class="overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></div>
+                         </div>
+                         <div class="gallery-item" data-album="sports" data-src="https://picsum.photos/1200/800?random=6" data-caption="Cricket match in progress on the school ground.">
+                             <img src="https://picsum.photos/400/300?random=6" alt="School cricket match" loading="lazy">
+                              <div class="overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></div>
+                         </div>
+                         <div class="gallery-item" data-album="sports" data-src="https://picsum.photos/1200/800?random=7" data-caption="Basketball practice session.">
+                             <img src="https://picsum.photos/400/300?random=7" alt="Basketball practice" loading="lazy">
+                              <div class="overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></div>
+                         </div>
+                          <div class="gallery-item" data-album="sports" data-src="https://picsum.photos/1200/800?random=8" data-caption="Winners posing with medals after the sports meet.">
+                             <img src="https://picsum.photos/400/300?random=8" alt="Sports winners with medals" loading="lazy">
+                              <div class="overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></div>
+                         </div>
+                    </div>
+                </section>
+
+                 <section class="gallery-album" id="album-learning">
+                    <h2>Learning Environment</h2>
+                    <div class="gallery-grid">
+                         <div class="gallery-item" data-album="learning" data-src="https://picsum.photos/1200/800?random=9" data-caption="Teacher explaining a concept in a smart classroom.">
+                             <img src="https://picsum.photos/400/300?random=9" alt="Teacher in smart classroom" loading="lazy">
+                             <div class="overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></div>
+                         </div>
+                          <div class="gallery-item" data-album="learning" data-src="https://picsum.photos/1200/800?random=10" data-caption="Students engaged in a group activity.">
+                             <img src="https://picsum.photos/400/300?random=10" alt="Students in group activity" loading="lazy">
+                             <div class="overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></div>
+                         </div>
+                          <div class="gallery-item" data-album="learning" data-src="https://picsum.photos/1200/800?random=11" data-caption="Student working on a computer in the IT lab.">
+                             <img src="https://picsum.photos/400/300?random=11" alt="Student using computer lab" loading="lazy">
+                             <div class="overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></div>
+                         </div>
+                         <div class="gallery-item" data-album="learning" data-src="https://picsum.photos/1200/800?random=12" data-caption="Science experiment demonstration in the lab.">
+                              <img src="https://picsum.photos/400/300?random=12" alt="Science lab demonstration" loading="lazy">
+                              <div class="overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></div>
+                         </div>
+                          <div class="gallery-item" data-album="learning" data-src="https://picsum.photos/1200/800?random=13" data-caption="Reading session in the school library.">
+                              <img src="https://picsum.photos/400/300?random=13" alt="Students reading in library" loading="lazy">
+                              <div class="overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></div>
+                         </div>
+                    </div>
+                </section>
+
+                </div> </section> </main> <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="lightbox-caption">
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt=""> <div class="lightbox-nav">
+                <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
+                <button class="lightbox-next" id="lightbox-next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+         <div id="lightbox-caption" class="lightbox-caption" aria-live="polite"></div> <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">×</button>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                 <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>R.N. Tagore Higher Secondary School is committed to providing quality education that empowers students to become responsible global citizens.</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Twitter profile"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram profile"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our YouTube channel"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="notices.html">Notices</a></li>
+                        <li><a href="gallery.html" aria-current="page">Gallery</a></li> <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="admission.html">Admissions</a></li>
+                    </ul>
+                </div>
+                 <div class="footer-column">
+                    <h3>Academics</h3>
+                    <ul>
+                        <li><a href="#">Curriculum</a></li>
+                        <li><a href="#">Facilities</a></li>
+                        <li><a href="#">Faculty</a></li>
+                        <li><a href="#">School Calendar</a></li>
+                        <li><a href="#">Results</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <address>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 123 Education Road, Knowledge City</li>
+                            <li><i class="fas fa-phone-alt" aria-hidden="true"></i> <a href="tel:+919876543210">+91 9876543210</a></li>
+                            <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@rntagoreschool.edu">info@rntagoreschool.edu</a></li>
+                        </ul>
+                    </address>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© <span id="current-year">2025</span> R.N. Tagore Higher Secondary School. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <script src="first.js"></script>
+    <script>
+        // Ensure copyright year is updated
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // --- IMPORTANT: Lightbox JavaScript ---
+        // Reminder: The JavaScript in 'script.js' needs to handle the lightbox functionality,
+        // including opening, closing, populating content (img src, caption), and
+        // handling the previous/next navigation based on the 'data-album' attribute.
+    </script>
+
+</body>
+</html>

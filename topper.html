@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Achievers | R.N. Tagore H.S. School</title>
+    <meta name="description" content="Celebrating the outstanding achievements of students from R.N. Tagore Higher Secondary School. Meet our academic toppers and achievers.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="https://media-hosting.imagekit.io/09320f4d0ad84f25/rn%20tagore%20logo%202.o.png?Expires=1838483430&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=PdGQ1ljtS~a8gpczWKoe9NfKau2eJxP-pzIYO2veq6HGLycqNCPnJjX7n~dYt48BVP34l~kLGS8Hiwzvc75WG-xUyjmW~iCWuvsxVRlITjQirRdiyTeIazn91RwL0tDwMdJ85hxP37gp5d4k2hbjB7IjwJ5Gklgm32tkHiqCxt~4po4s6OlWfRWVdrxSJXkMOaGsi2ulh41KT-ZPPyGVP81lajEutHXlO1OrQeocvDp0nhQnGd-0Yb1peyDDt8SsJUtRY586mYPolBp7jvMSILv2ybMi6dJbvH6WIFO8zEtzDLrSscvsVejXSAGrm~9~EwzW7-EEn-YAmuCwFstZLg__" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://media-hosting.imagekit.io/09320f4d0ad84f25/rn%20tagore%20logo%202.o.png?Expires=1838483430&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=PdGQ1ljtS~a8gpczWKoe9NfKau2eJxP-pzIYO2veq6HGLycqNCPnJjX7n~dYt48BVP34l~kLGS8Hiwzvc75WG-xUyjmW~iCWuvsxVRlITjQirRdiyTeIazn91RwL0tDwMdJ85hxP37gp5d4k2hbjB7IjwJ5Gklgm32tkHiqCxt~4po4s6OlWfRWVdrxSJXkMOaGsi2ulh41KT-ZPPyGVP81lajEutHXlO1OrQeocvDp0nhQnGd-0Yb1peyDDt8SsJUtRY586mYPolBp7jvMSILv2ybMi6dJbvH6WIFO8zEtzDLrSscvsVejXSAGrm~9~EwzW7-EEn-YAmuCwFstZLg__" sizes="180x180">
+
+    <style>
+        /* Page Header Style (reuse or adapt) */
+        .page-header {
+            background: linear-gradient(rgba(26, 75, 140, 0.75), rgba(26, 75, 140, 0.75)), url('https://picsum.photos/1920/400?random=achievers&blur=1') no-repeat center center/cover; /* Placeholder Banner */
+            padding: 6rem 0;
+            text-align: center;
+            color: var(--white);
+            margin-top: 8rem; /* Adjust based on fixed header height */
+        }
+        .page-header h1 { font-size: clamp(3.5rem, 6vw, 5rem); margin-bottom: 1rem; color: var(--white); }
+        .page-header p { font-size: 1.8rem; max-width: 70rem; margin: 0 auto; color: rgba(255, 255, 255, 0.9); }
+
+        .topper-year-section {
+            margin-bottom: 5rem;
+        }
+        .topper-year-section h2 {
+            font-size: 2.8rem;
+            color: var(--primary-blue);
+            margin-bottom: 3rem;
+            text-align: center; /* Center year heading */
+            position: relative;
+        }
+         /* Modify or keep the global h2::after style */
+        .topper-year-section h2::after { /* Example: Centered underline */
+            content: ''; display: block; width: 8rem; height: 4px;
+            background: var(--accent-yellow); margin: 1.5rem auto 0;
+        }
+
+
+        .toppers-grid {
+            display: grid;
+            /* Adjust minmax for desired card size */
+            grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+            gap: 3rem;
+        }
+
+        .topper-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--box-shadow-light);
+            text-align: center;
+            padding: 2.5rem 2rem;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .topper-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow);
+        }
+
+        .topper-photo {
+            width: 15rem; /* Adjust photo size */
+            height: 15rem;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            background-color: var(--light-gray); /* Placeholder bg */
+            border: 4px solid var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .topper-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the circle area */
+        }
+
+        .topper-info h3 {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .topper-info .achievement {
+            font-size: 1.6rem;
+            color: var(--secondary-blue);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .topper-info .session {
+            font-size: 1.4rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .topper-info .topper-quote {
+            font-size: 1.4rem;
+            font-style: italic;
+            color: #555;
+            margin-top: 1rem;
+            border-top: 1px dashed #eee;
+            padding-top: 1rem;
+            position: relative;
+        }
+         .topper-info .topper-quote::before {
+             content: '\f10d'; /* FontAwesome quote-left */
+             font-family: 'Font Awesome 6 Free';
+             font-weight: 900;
+             color: var(--secondary-blue);
+             font-size: 1.8rem;
+             margin-right: 0.5rem;
+             opacity: 0.5;
+         }
+
+
+        @media (max-width: 768px) {
+             .page-header { margin-top: 7rem; padding: 4rem 0; }
+             .topper-year-section h2 { font-size: 2.5rem; }
+             .toppers-grid { grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); } /* Adjust for smaller screens */
+        }
+         @media (max-width: 576px) {
+             .toppers-grid { grid-template-columns: 1fr; } /* Stack cards on very small screens */
+              .topper-photo { width: 12rem; height: 12rem; }
+              .topper-info h3 { font-size: 1.8rem;}
+         }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+             <a href="index.html" class="logo" aria-label="R.N. Tagore H.S. School Homepage">
+                  <img src="https://media-hosting.imagekit.io/09320f4d0ad84f25/rn%20tagore%20logo%202.o.png?Expires=1838483430&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=PdGQ1ljtS~a8gpczWKoe9NfKau2eJxP-pzIYO2veq6HGLycqNCPnJjX7n~dYt48BVP34l~kLGS8Hiwzvc75WG-xUyjmW~iCWuvsxVRlITjQirRdiyTeIazn91RwL0tDwMdJ85hxP37gp5d4k2hbjB7IjwJ5Gklgm32tkHiqCxt~4po4s6OlWfRWVdrxSJXkMOaGsi2ulh41KT-ZPPyGVP81lajEutHXlO1OrQeocvDp0nhQnGd-0Yb1peyDDt8SsJUtRY586mYPolBp7jvMSILv2ybMi6dJbvH6WIFO8zEtzDLrSscvsVejXSAGrm~9~EwzW7-EEn-YAmuCwFstZLg__" alt="R.N. Tagore H.S. School Logo">
+                  <div class="logo-text">
+                      <h1>R.N. Tagore H.S. School</h1>
+                      <p>A Quality School For Better Tomorrow</p>
+                  </div>
+             </a>
+             <nav aria-label="Main Navigation">
+                 <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false" aria-controls="nav-menu">
+                     <i class="fas fa-bars"></i>
+                 </button>
+                 <ul id="nav-menu" role="menu">
+                     <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                     <li role="none"><a href="about.html" role="menuitem">About</a></li>
+                     <li role="none"><a href="notices.html" role="menuitem">Notices</a></li>
+                     <li role="none"><a href="gallery.html" role="menuitem">Gallery</a></li>
+                     <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
+                     <li role="none"><a href="results.html" role="menuitem">Results</a></li>
+                      <li role="none"><a href="toppers.html" role="menuitem" aria-current="page">Toppers</a></li> <li role="none" class="nav-btn-li"><a href="admission.html" class="btn nav-btn" role="menuitem">Admissions</a></li>
+                      <li role="none" class="mobile-nav-btn" style="display: none;"><a href="admission.html" class="btn" role="menuitem">Admissions</a></li>
+                 </ul>
+             </nav>
+        </div>
+    </header>
+
+     <section class="page-header">
+         <div class="container">
+             <h1>Our Achievers</h1>
+             <p>Celebrating the excellence and hard work of our students.</p>
+         </div>
+     </section>
+
+     <main>
+         <section class="section" id="toppers-gallery">
+             <div class="container">
+
+                 <section class="topper-year-section" id="toppers-2024-25">
+                     <h2>Academic Session 2024 - 2025</h2>
+                     <div class="toppers-grid">
+
+                         <article class="topper-card">
+                              <div class="topper-photo">
+                                  <img src="https://picsum.photos/seed/priya/200/200" alt="Photo of Priya Singh">
+                              </div>
+                              <div class="topper-info">
+                                  <h3>Priya Singh</h3>
+                                  <p class="achievement">1st Rank - Class XII (Science)</p>
+                                  <p class="session">Session: 2024-25</p>
+                              </div>
+                         </article>
+
+                         <article class="topper-card">
+                              <div class="topper-photo">
+                                  <img src="https://picsum.photos/seed/rohan/200/200" alt="Photo of Rohan Verma">
+                              </div>
+                              <div class="topper-info">
+                                  <h3>Rohan Verma</h3>
+                                  <p class="achievement">1st Rank - Class X</p>
+                                  <p class="session">Session: 2024-25</p>
+                              </div>
+                         </article>
+
+                         <article class="topper-card">
+                              <div class="topper-photo">
+                                   <img src="https://assets.grok.com/users/9f6ac30f-283f-4efe-a573-887ab320b110/generated/tvZa2eI9cJGE3FiY/image.jpg" alt="Photo of Aisha Khan">
+                              </div>
+                              <div class="topper-info">
+                                  <h3>Aisha Khan</h3>
+                                  <p class="achievement">Topper - Class XII (Commerce)</p>
+                                  <p class="session">Session: 2024-25</p>
+                                   <blockquote class="topper-quote">"Dedication and support from teachers made this possible."</blockquote>
+                              </div>
+                         </article>
+
+                          <article class="topper-card">
+                              <div class="topper-photo">
+                                  <img src="https://picsum.photos/seed/vikram/200/200" alt="Photo of Vikram Rathore">
+                              </div>
+                              <div class="topper-info">
+                                  <h3>Vikram Rathore</h3>
+                                  <p class="achievement">Sports Champion - Athletics (Senior)</p>
+                                  <p class="session">Session: 2024-25</p>
+                              </div>
+                         </article>
+
+                          </div> </section>
+
+                 <section class="topper-year-section" id="toppers-2023-24">
+                     <h2>Academic Session 2023 - 2024</h2>
+                     <div class="toppers-grid">
+
+                         <article class="topper-card">
+                             <div class="topper-photo">
+                                  <img src="https://picsum.photos/seed/sneha/200/200" alt="Photo of Sneha Gupta">
+                             </div>
+                             <div class="topper-info">
+                                  <h3>Sneha Gupta</h3>
+                                  <p class="achievement">1st Rank - Class XII (Arts)</p>
+                                  <p class="session">Session: 2023-24</p>
+                             </div>
+                         </article>
+
+                         <article class="topper-card">
+                             <div class="topper-photo">
+                                 <img src="https://picsum.photos/seed/arjun/200/200" alt="Photo of Arjun Mehta">
+                             </div>
+                             <div class="topper-info">
+                                  <h3>Arjun Mehta</h3>
+                                  <p class="achievement">Overall School Topper</p>
+                                  <p class="session">Session: 2023-24</p>
+                                   <blockquote class="topper-quote">"Focus and determination are crucial."</blockquote>
+                             </div>
+                         </article>
+
+                          </div> </section>
+
+             </div>
+         </section>
+     </main>
+
+     <footer>
+        <div class="container">
+             <div class="footer-content">
+                 <div class="footer-column">
+                     <h3>About Us</h3>
+                     <p>R.N. Tagore Higher Secondary School is committed to providing quality education...</p>
+                     <div class="social-links">
+                         <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                         <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Twitter profile"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                         <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram profile"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                         <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our YouTube channel"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                     </div>
+                 </div>
+                 <div class="footer-column">
+                     <h3>Quick Links</h3>
+                      <ul>
+                          <li><a href="index.html#home">Home</a></li>
+                          <li><a href="about.html">About</a></li>
+                          <li><a href="notices.html">Notices</a></li>
+                          <li><a href="gallery.html">Gallery</a></li>
+                          <li><a href="contact.html">Contact</a></li>
+                          <li><a href="results.html">Results</a></li>
+                          <li><a href="toppers.html" aria-current="page">Toppers</a></li> <li><a href="admission.html">Admissions</a></li>
+                      </ul>
+                 </div>
+                 <div class="footer-column">
+                     <h3>Academics</h3>
+                     <ul>
+                          <li><a href="#">Curriculum</a></li>
+                          <li><a href="#">Facilities</a></li>
+                          <li><a href="#">Faculty</a></li>
+                          <li><a href="#">School Calendar</a></li>
+                          <li><a href="results.html">Results</a></li>
+                      </ul>
+                 </div>
+                 <div class="footer-column">
+                     <h3>Contact Info</h3>
+                      <address>
+                          <ul>
+                               <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 123 School Lane, Cityville</li>
+                               <li><i class="fas fa-phone-alt" aria-hidden="true"></i> <a href="tel:+911234567890">+91 12345 67890</a></li>
+                               <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@rntagore-example.com">info@rntagore-example.com</a></li>
+                          </ul>
+                      </address>
+                 </div>
+             </div>
+             <div class="copyright">
+                 <p>© <span id="current-year">2025</span> R.N. Tagore Higher Secondary School. All Rights Reserved.</p>
+             </div>
+         </div>
+     </footer>
+
+     <button class="back-to-top" id="backToTop" aria-label="Back to top">
+         <i class="fas fa-arrow-up" aria-hidden="true"></i>
+     </button>
+
+     <script src="first.js"></script>
+     <script>
+         // Ensure copyright year is updated
+         document.getElementById('current-year').textContent = new Date().getFullYear();
+         // Ensure mobile menu and back-to-top button JS works
+     </script>
+
+</body>
+</html>
